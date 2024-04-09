@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido de Pizza</title>
+    <style type="text/css">
+        body {
+            background-color: black;
+            color: lime;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="gif.gif" width="200px" height="200px">
+    <h2>Formulario de Pedido de Pizza</h2>
+    <form action="mailto:tu_correo@example.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="nombre">Nombre del Cliente:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="cantidad">Cantidad de Productos:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="pizza">Selecciona una Pizza:</label>
+            <select id="pizza" name="pizza" multiple size="4" required>
+                <option value="peperoni">Pizza de Peperoni</option>
+                <option value="queso">Pizza de Queso</option>
+                <option value="hawaiana">Pizza Hawaiana</option>
+                <option value="mexicana">Pizza Mexicana</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Tamaño de Pizza:</label><br>
+            <input type="radio" id="extragrande" name="tamaño" value="Extragrande" required>
+            <label for="extragrande">Extra Grande $300</label><br>
+            <input type="radio" id="grande" name="tamaño" value="Grande" required>
+            <label for="grande">Grande $250</label><br>
+            <input type="radio" id="mediana" name="tamaño" value="Mediana" required>
+            <label for="mediana">Mediana $200</label><br>
+            <input type="radio" id="chica" name="tamaño" value="Chica" required>
+            <label for="chica">Chica $150</label>
+        </div>
+        <div class="form-group">
+            <label>Forma de Pago:</label><br>
+            <input type="radio" id="efectivo" name="forma_pago" value="Efectivo" required>
+            <label for="efectivo">Efectivo</label><br>
+            <input type="radio" id="paypal" name="forma_pago" value="Paypal" required>
+            <label for="paypal">Paypal</label><br>
+            <input type="radio" id="tarjeta_credito" name="forma_pago" value="Tarjeta de crédito" required>
+            <label for="tarjeta_credito">Tarjeta de Crédito</label><br>
+            <input type="radio" id="tarjeta_debito" name="forma_pago" value="Tarjeta de débito" required>
+            <label for="tarjeta_debito">Tarjeta de Débito</label>
+        </div>
+        <div class="form-group">
+            <label>¿Quién recoge el pedido?</label>
+            <input type="text" id="cliente_recoge" name="cliente_recoge" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar Pedido</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
